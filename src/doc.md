@@ -432,3 +432,24 @@ export class UserActivityEffects {
     private userActivityService: UserActivityService,
   ) {}
 }
+
+
+
+Lazy loading is an important Angular feature that boosts performance and allows for better, modular architecture. Basically, we split our app into feature modules, each corresponding to some app-specific feature, and then load those modules when needed (when the user navigates to them). Lazy loading is a built-in feature in Angular.
+
+So how does NgRx relate to this? Let's examine the structure of our app to understand better.
+
+In our financial logger app we have at least two features: categories and logs. We might want to have pages that show all the logs, add new logs, add categories, and so on, so it makes sense to keep them separated.
+
+But we have mentioned that the State in our Store is basically a large global object with no write access, meaning that we probably would want to define all the feature state slices beforehand; but that would kind of break the lazy loading logic: if the user never visits the category module pages, why would we even have any state related to categories stored?
+
+Thankfully, NgRx got us covered.
+
+NgRx Feature states#
+In NgRx, data from the lazy loaded modules can be stored in what is called Feature states; basically, our Store now will contain data like this:
+
+export interface AppState {
+  categories: CategoryState;
+  logs: LogState;
+}
+The trick here being that, say, logs is undefined from the start of the application until the user visits a page from the LogsModule.

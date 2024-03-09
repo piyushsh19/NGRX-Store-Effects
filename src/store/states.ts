@@ -1,19 +1,28 @@
-const state = {
-    persons: [
-        {
-            name: "Wisdom Ekpot",
-            age: 10
-        }, {
-            name: "John Cat",
-            age: 40
-        },
-        {
-            name: "James John",
-            age: 11
-        }
-    ],
-    bookDescription: {
-        name: "Name of book",
-        author: "Wisdom Ekpot"
-    }
-}
+export enum LogType {
+    Spend = "Spend",
+    Income = "Income",
+  }
+  
+  export interface Log {
+    title: string;
+    date: string;
+    amount: number;
+    type: LogType;
+    categoryId: number;
+  }
+  
+  export interface LogsState {
+    logs: Log[];
+    loading: {
+      list: boolean;
+      add: boolean;
+    };
+  }
+  
+  export const initialState: LogsState = {
+    logs: [],
+    loading: {
+      list: false,
+      add: false,
+    },
+  };
