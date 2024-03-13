@@ -9,6 +9,11 @@
   dependencies:
     tslib "^2.3.0"
 
+"@ngrx/schematics@^17.1.1":
+  version "17.1.1"
+  resolved "https://registry.npmjs.org/@ngrx/schematics/-/schematics-17.1.1.tgz"
+  integrity sha512-DaBU97P+lCRWnphvYkE0qvZW16oCpn43/IA8XktFJa6hJP/JVlqk6cLR5fhfoLL2zdhpPkj9w5vsdqIlXZYXgw==
+
 "@ngrx/store@^17.1.1":
   version "17.1.1"
   resolved "https://registry.npmjs.org/@ngrx/store/-/store-17.1.1.tgz"
