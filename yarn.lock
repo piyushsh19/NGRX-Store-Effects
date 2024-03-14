@@ -14,6 +14,13 @@
   resolved "https://registry.npmjs.org/@ngrx/schematics/-/schematics-17.1.1.tgz"
   integrity sha512-DaBU97P+lCRWnphvYkE0qvZW16oCpn43/IA8XktFJa6hJP/JVlqk6cLR5fhfoLL2zdhpPkj9w5vsdqIlXZYXgw==
 
+"@ngrx/signals@^17.1.1":
+  version "17.1.1"
+  resolved "https://registry.npmjs.org/@ngrx/signals/-/signals-17.1.1.tgz"
+  integrity sha512-9Rlw7u8LxkyS+HMZe7DzUkV1p/2IL5tDa1ZHhX8Ldilx4HoOHvISdzCagCpXMoXDLZGEaWOA/n/BcQQxsjytEg==
+  dependencies:
+    tslib "^2.3.0"
+
 "@ngrx/store@^17.1.1":
   version "17.1.1"
   resolved "https://registry.npmjs.org/@ngrx/store/-/store-17.1.1.tgz"

@@ -49,3 +49,21 @@ Allows combining multiple observables in the template.
 Handles null and undefined values in a clean unified/structured way.
 Triggers change detection using the RenderScheduler that behaves differently in zone-full and zone-less mode.
 Distinct the same values in a row for better performance.
+
+NgRx Signals is a standalone library that provides a reactive state management solution and a set of utilities for Angular Signals.
+
+Key Principles
+Simple and Intuitive: Designed with ease of use in mind, NgRx Signals provides a straightforward and intuitive API for developers to efficiently work with Angular Signals.
+Lightweight and Performant: Keep your application size optimal with a lightweight library that adds minimal overhead to your projects and performs efficiently.
+Declarative: NgRx Signals is built around the concept of declarative programming, ensuring clean and concise code.
+Modular, Extensible, and Scalable: Modularity and extensibility are the guiding principles of this library. NgRx Signals enables the creation of independent building blocks that can be easily combined for flexible and scalable implementations.
+Opinionated, but Flexible: Strike a balance between flexibility and opinionation, offering customization where needed while providing thoughtful conventions for a smooth development experience.
+Type-safe: NgRx Signals is designed with a strong focus on type safety, ensuring the prevention of errors and misuse at compile time.
+Installation
+Detailed installation instructions can be found on the Installation page.
+
+Main Features
+SignalStore: A fully-featured state management solution that provides native support for Angular Signals and offers a robust way to manage application state.
+SignalState: A lightweight utility for managing signal-based state in Angular components and services in a concise and minimalistic manner.
+RxJS Integration: A plugin for opt-in integration with RxJS, enabling easier handling of asynchronous side effects.
+Entity Management: A plugin for manipulating and querying entity collections in a simple and performant way.
