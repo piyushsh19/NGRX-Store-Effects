@@ -13,6 +13,7 @@
     "webpack-dev-server": "2.2.0"
   },
   "dependencies": {
+    "@ngrx/data": "^17.1.1",
     "@ngrx/operators": "^17.1.1",
     "@ngrx/signals": "^17.1.1",
     "@ngrx/store": "^17.1.1"

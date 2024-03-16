@@ -2,17 +2,53 @@
 # yarn lockfile v1
 
 
-"@angular/core@^17.0.0":
-  version "17.2.3"
-  resolved "https://registry.npmjs.org/@angular/core/-/core-17.2.3.tgz"
-  integrity sha512-DU+RdUB4E4I489R2P2hOrgkCDJNXlVaTzYixpgeDnuldCIYM0MatEzjor9DYNL3EDCayHF+M4HlVOcn6T/IVPQ==
+"@angular/common@^17.0.0":
+  version "17.3.0"
+  resolved "https://registry.npmjs.org/@angular/common/-/common-17.3.0.tgz"
+  integrity sha512-JnS6jbLl2RxsvGFUOBGeoyviNLEjZKRhn3uK4Ein3DENPv0BeSFMjif9Dp4ReUCnqoD4QQVG0X/r1GFaqHn2pw==
   dependencies:
     tslib "^2.3.0"
+
+"@angular/core@^17.0.0", "@angular/core@17.3.0":
+  version "17.3.0"
+  resolved "https://registry.npmjs.org/@angular/core/-/core-17.3.0.tgz"
+  integrity sha512-umwsNFl/wEMTCUVvNl5iieEgHA+ESxSMcjedZGFWNGnpUxKTgYFYNG41/1wNZfPrS0+uRPHuYU9IHD+NR2s/Rw==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ngrx/data@^17.1.1":
+  version "17.1.1"
+  resolved "https://registry.npmjs.org/@ngrx/data/-/data-17.1.1.tgz"
+  integrity sha512-ITVtYfX459tzxNBvbAQFHVShLqgvTOYpA+3iPjERwynDDVunf0ScBdFWEZG6HQB8B4WXIf0qCnlnUV+9XCXxwg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/effects@17.1.1":
+  version "17.1.1"
+  resolved "https://registry.npmjs.org/@ngrx/effects/-/effects-17.1.1.tgz"
+  integrity sha512-VDNVI70wfEwqoNliffAiMhsPry0CWKkifCLmfzr+SZEEdAaPEBr4FtRrrdcdq/ovmkcgoWukkH2MBljbCyHwtA==
+  dependencies:
+    "@ngrx/operators" "17.0.0-beta.0"
+    tslib "^2.0.0"
+
+"@ngrx/entity@17.1.1":
+  version "17.1.1"
+  resolved "https://registry.npmjs.org/@ngrx/entity/-/entity-17.1.1.tgz"
+  integrity sha512-MNjJY2K0Ci6RS64AEEy4P8nYWVP8EQnt5/Rjy4IQ8IAjw2zFlDSiOJA5xmFcWTk9v0m8x9YZ/7clVGA4Es69kA==
+  dependencies:
+    tslib "^2.0.0"
 
 "@ngrx/operators@^17.1.1":
   version "17.1.1"
   resolved "https://registry.npmjs.org/@ngrx/operators/-/operators-17.1.1.tgz"
   integrity sha512-B+D8zGSsVeIzonKhDLhO/T8g+RykjFhyhCLNJTJ5wCXuVVgk20JCxRc/71nx6efNvO08uzyXPU4ncR3aHxuThQ==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ngrx/operators@17.0.0-beta.0":
+  version "17.0.0-beta.0"
+  resolved "https://registry.npmjs.org/@ngrx/operators/-/operators-17.0.0-beta.0.tgz"
+  integrity sha512-EbO8AONuQ6zo2v/mPyBOi4y0CTAp1x4Z+bx7ZF+Pd8BL5ma53BTCL1TmzaeK5zPUe0yApudLk9/ZbHXPnVox5A==
   dependencies:
     tslib "^2.3.0"
 
@@ -28,7 +64,7 @@
   dependencies:
     tslib "^2.3.0"
 
-"@ngrx/store@^17.1.1":
+"@ngrx/store@^17.1.1", "@ngrx/store@17.1.1":
   version "17.1.1"
   resolved "https://registry.npmjs.org/@ngrx/store/-/store-17.1.1.tgz"
   integrity sha512-MGbKLTcl4uq2Uzx+qbMYNy6xW+JnkpRiznaGFX2/NFflq/zNZsjbxZrvn4/Z6ClVYIjj3uadjM1fupwMYMJxVA==

@@ -67,3 +67,47 @@ SignalStore: A fully-featured state management solution that provides native sup
 SignalState: A lightweight utility for managing signal-based state in Angular components and services in a concise and minimalistic manner.
 RxJS Integration: A plugin for opt-in integration with RxJS, enabling easier handling of asynchronous side effects.
 Entity Management: A plugin for manipulating and querying entity collections in a simple and performant way.
+
+
+@ngrx/data
+NgRx Data is an extension that offers a gentle introduction to NgRx by simplifying management of entity data while reducing the amount of explicitness.
+
+Introduction
+Many applications have substantial domain models with 10s or 100s of entity types.
+
+Such applications typically create, retrieve, update, and delete entity data that are "persisted" in a database of some sort, hosted on a remote server.
+
+Developers who build these apps with the NgRx Store, Effects, and Entity libraries alone tend to write a large number of actions, action-creators, reducers, effects, dispatchers, and selectors as well as the HTTP GET, PUT, POST, and DELETE methods for each entity type. There will be a lot of repetitive code to create, maintain, and test. The more entities in your model, the bigger the challenge.
+
+With NgRx Data you can develop large entity models quickly with very little code and without knowing much NgRx at all. Yet all of NgRx remains accessible to you, when and if you want it.
+
+NgRx Data is an abstraction over the Store, Effects, and Entity that radically reduces the amount of code you'll write. As with any abstraction, while you gain simplicity, you lose the explicitness of direct interaction with the supporting NgRx libraries.
+
+Key Concepts
+NgRx Data
+automates the creation of actions, reducers, effects, dispatchers, and selectors for each entity type.
+provides default HTTP GET, PUT, POST, and DELETE methods for each entity type.
+holds entity data as collections within a cache which is a slice of NgRx store state.
+supports optimistic and pessimistic save strategies
+enables transactional save of multiple entities of multiple types in the same request.
+makes reasonable default implementation choices
+offers numerous extension points for changing or augmenting those default behaviors.
+NgRx Data targets management of persisted entity data, like Customers and Orders, that many apps query and save to remote storage. That's its sweet spot.
+
+It is ill-suited to non-entity data. Value types, enumerations, session data and highly idiosyncratic data are better managed with standard NgRx. Real-world apps will benefit from a combination of NgRx techniques, all sharing a common store.
+
+Entity
+An entity is an object with long-lived data values that you read from and write to a database. An entity refers to some "thing" in the application domain. Examples include a Customer, Order, LineItem, Product, Person and User.
+
+An entity is a specific kind of data, an object defined by its thread of continuity and identity.
+
+We experience its "continuity" by storing and retrieving ("persisting") entity objects in a permanent store on a server, a store such as a database. Whether we retrieve the "Sally" entity today or tomorrow or next week, we "mean" that we're getting the same conceptual "Sally" no matter how her data attributes have changed.
+
+In NgRx Data we maintain the entity object's identity by means of its primary key. Every entity in NgRx Data must have a primary key. The primary key is usually a single attribute of the object. For example, that "Sally" entity object might be an instance of the "Customer" entity type, an instance whose permanent, unchanging primary key is the id property with a value of 42.
+
+The primary key doesn't have to be a single attribute. It can consist of multiple attributes of the object if you need that feature. What matters is that the primary key uniquely identifies that object within a permanent collection of entities of the same type. There can be exactly one Customer entity with id: 42 and that entity is "Sally".
+
+Entity Collection
+The notion of an Entity Collection is also fundamental to NgRx Data. All entities belong to a collection of the same entity type. A Customer entity belongs to a Customers collection.
+
+Even if you have only one instance of an entity type, it must be held within an entity collection: perhaps a collection with a single element.

@@ -30,6 +30,9 @@ import { RouteEffects } from './store/effects/route.effects';
 import { ModalEffects } from './store/effects/modal.effects';
 import { AppEffects } from './store/effects/app.effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
+import { entityConfig } from './entity-metadata';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     FooterComponent,
   ],
   imports: [
+    EntityDataModule.forRoot(entityConfig),
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -79,6 +83,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     ]),
     StoreRouterConnectingModule.forRoot(),
   ],
+  
   providers: [],
   bootstrap: [AppComponent],
 })
