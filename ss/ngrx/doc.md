@@ -259,3 +259,38 @@ Allows combining multiple observables in the template.
 Handles null and undefined values in a clean unified/structured way.
 Triggers change detection using the RenderScheduler that behaves differently in zone-full and zone-less mode.
 Distinct the same values in a row for better performance.
+Overview
+Use ESLint to follow the best practices and to avoid common pitfalls in your application.
+
+The NgRx ESLint Plugin is no different and promotes the key concepts to create a maintainable project. It consists of @ngrx/store, @ngrx/effects, and @ngrx/component-store rules and a handful of preconfigured configurations.
+
+The plugin comes with a number of rules that help address most popular NgRx malpractices. The rules are configurable so that you can choose the ones you want to follow, and which rules should give a linting error or warning.
+
+Some rules also allow automatic fixes with ng lint --fix.
+
+Adding rules
+To use the a rule, import the NgRx plugin via plugins or extends. You can add a rule by adding the rule to the rules collection.
+
+content_copy
+{
+      "plugins": ["@ngrx"],
+      "rules": {
+        "@ngrx/good-action-hygiene": "error",
+      }
+}
+or
+
+content_copy
+{
+      "extends": ["@ngrx/recommended"],
+      "rules": {
+        "@ngrx/good-action-hygiene": "error",
+      }
+}
+Instead of manually configuring the rules, there are also preconfigured configurations. To use a configuration, add it to extends:
+
+content_copy
+{
+      "extends": ["@ngrx/recommended-requiring-type-checking"],
+      "rules": {}
+}
