@@ -294,3 +294,13 @@ content_copy
       "extends": ["@ngrx/recommended-requiring-type-checking"],
       "rules": {}
 }
+
+NgRx is a community-maintained project that thrives due to the contributions of fellow developers. Whether it be documentation, issues, features, or tests, all contributions help this project in a meaningful way. This page serves as a "Getting Started Guide" on how to contribute to NgRx in different areas. If you also want to donate or sponsor this project, visit our GitHub Sponsors page.
+
+Prerequisites
+yarn - The NgRx library utilizes the yarn CLI tool. Please make sure that you have the latest stable release of yarn installed. For more information, visit the Yarn Install Docs
+Contributing to the Docs and NgRx.io Website
+Learn How to Contribute
+Watch as Brandon Roberts and Jan-Niklas Wortmann walk through how to contribute to RxJS and NgRx through the docs. They will cover finding issues, making changes, and submitting a pull request.
+
+
