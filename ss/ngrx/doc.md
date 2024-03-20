@@ -304,3 +304,26 @@ Learn How to Contribute
 Watch as Brandon Roberts and Jan-Niklas Wortmann walk through how to contribute to RxJS and NgRx through the docs. They will cover finding issues, making changes, and submitting a pull request.
 
 
+Store
+
+The store can be seen as your client side database but, more importantly, it reflects the state of your application. You can see it as the single source of truth.
+
+It is the only thing you alter when you follow the Redux pattern and you modify by dispatching actions to it.
+
+Reducer
+
+Reducers are the functions that know what to do with a given action and the previous state of your app.
+
+The reducers will take the previous state from your store and apply a pure function to it. Pure means that the function always returns the same value for the same input and that it has no side effects. From the result of that pure function, you will have a new state that will be put in your store.
+
+Actions
+
+Actions are the payload that contains needed information to alter your store. Basically, an action has a type and a payload that your reducer function will take to alter the state.
+
+Dispatcher
+
+Dispatchers are simply an entry point for you to dispatch your action. In Ngrx, there is a dispatch method directly on the store.
+
+Middleware
+
+Middleware are some functions that will intercept each action that is being dispatched in order to create side effects, even though you will not use them in this article. They are implemented in the Ngrx/Effect library, and there is a big chance that you will need them while building real-world applications.
